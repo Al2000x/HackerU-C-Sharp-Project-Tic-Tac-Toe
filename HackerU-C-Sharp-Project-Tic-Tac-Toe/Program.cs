@@ -12,7 +12,7 @@ namespace MyApp
         static void Main(string[] args)
         {
             Console.WriteLine(
-                "************************************walla3**************************\r\n" +
+                "**************************************************************\r\n" +
                 "INSTRUCTIONS:\r\n" +
                 "Welcome to Tic Tac Toe\r\n" +
                 "The game is played on a grid that's 3 squares by 3 squares.\r\n" +
@@ -67,32 +67,32 @@ namespace MyApp
             double p2Turn = 0;
             double[] player1PicksArr = new double[5];
             double[] player2PicksArr = new double[5];
-            char[] gameArray = new char[9];
+            char[] gameArray = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             bool p1WonGame = false;
             while (compleateGameFlag == false)
             {
                 if (gameTurnNum % 2 == 0)
                 {
                     Console.WriteLine(
-                            "***********************************\n" +
-                            "*          |           |          *\n" +
-                            "*          |           |          *\n" +
-                           $"*    {gameArray[0]}    |     {gameArray[1]}      |     {gameArray[2]}     *\n" +
-                            "*   (1)    |    (2)    |    (3)   *\n" +
-                            "*          |           |          *\n" +
-                            "*----------|-----------|----------*\n" +
-                            "*          |           |          *\n" +
-                            "*          |           |          *\n" +
-                           $"*    {gameArray[3]}    |     {gameArray[4]}      |     {gameArray[5]}     *\n" +
-                            "*   (4)    |    (5)    |    (6)   *\n" +
-                            "*          |           |          *\n" +
-                            "*----------|-----------|----------*\n" +
-                            "*          |           |          *\n" +
-                            "*          |           |          *\n" +
-                           $"*    {gameArray[6]}    |     {gameArray[7]}      |     {gameArray[8]}     *\n" +
-                            "*   (7)    |    (8)    |    (9)   *\n" +
-                            "*          |           |          *\n" +
-                            "***********************************\n");
+                        "***********************************\n" +
+                        "*          |           |          *\n" +
+                        "*          |           |          *\n" +
+                       $"*    {gameArray[0]}     |     {gameArray[1]}     |     {gameArray[2]}    *\n" +
+                        "*   (1)    |    (2)    |    (3)   *\n" +
+                        "*          |           |          *\n" +
+                        "*----------|-----------|----------*\n" +
+                        "*          |           |          *\n" +
+                        "*          |           |          *\n" +
+                       $"*    {gameArray[3]}     |     {gameArray[4]}     |     {gameArray[5]}    *\n" +
+                        "*   (4)    |    (5)    |    (6)   *\n" +
+                        "*          |           |          *\n" +
+                        "*----------|-----------|----------*\n" +
+                        "*          |           |          *\n" +
+                        "*          |           |          *\n" +
+                       $"*   {gameArray[6]}      |     {gameArray[7]}     |     {gameArray[8]}    *\n" +
+                        "*   (7)    |    (8)    |    (9)   *\n" +
+                        "*          |           |          *\n" +
+                        "***********************************\n");
 
                     double pInput = PlayersInput(secondPlayerInGame, firstPlayerInGame, player1PicksArr, player2PicksArr, gameTurnNum);
                     gameArray[(int)pInput - 1] = 'X';
@@ -108,25 +108,25 @@ namespace MyApp
                 else
                 {
                     Console.WriteLine(
-                        "***********************************\n" +
-                        "*          |           |          *\n" +
-                        "*          |           |          *\n" +
-                       $"*    {gameArray[0]}      |     {gameArray[1]}      |     {gameArray[2]}     *\n" +
-                        "*   (1)    |    (2)    |    (3)   *\n" +
-                        "*          |           |          *\n" +
-                        "*----------|-----------|----------*\n" +
-                        "*          |           |          *\n" +
-                        "*          |           |          *\n" +
-                       $"*    {gameArray[3]}      |     {gameArray[4]}      |     {gameArray[5]}     *\n" +
-                        "*   (4)    |    (5)    |    (6)   *\n" +
-                        "*          |           |          *\n" +
-                        "*----------|-----------|----------*\n" +
-                        "*          |           |          *\n" +
-                        "*          |           |          *\n" +
-                       $"*    {gameArray[6]}      |     {gameArray[7]}      |     {gameArray[8]}     *\n" +
-                        "*   (7)    |    (8)    |    (9)   *\n" +
-                        "*          |           |          *\n" +
-                        "***********************************\n");
+                         "***********************************\n" +
+                         "*          |           |          *\n" +
+                         "*          |           |          *\n" +
+                        $"*    {gameArray[0]}     |     {gameArray[1]}     |     {gameArray[2]}    *\n" +
+                         "*   (1)    |    (2)    |    (3)   *\n" +
+                         "*          |           |          *\n" +
+                         "*----------|-----------|----------*\n" +
+                         "*          |           |          *\n" +
+                         "*          |           |          *\n" +
+                        $"*    {gameArray[3]}     |     {gameArray[4]}     |     {gameArray[5]}    *\n" +
+                         "*   (4)    |    (5)    |    (6)   *\n" +
+                         "*          |           |          *\n" +
+                         "*----------|-----------|----------*\n" +
+                         "*          |           |          *\n" +
+                         "*          |           |          *\n" +
+                        $"*   {gameArray[6]}      |     {gameArray[7]}     |     {gameArray[8]}    *\n" +
+                         "*   (7)    |    (8)    |    (9)   *\n" +
+                         "*          |           |          *\n" +
+                         "***********************************\n");
 
 
                     double pInput = PlayersInput(secondPlayerInGame, firstPlayerInGame, player1PicksArr, player2PicksArr, gameTurnNum);
