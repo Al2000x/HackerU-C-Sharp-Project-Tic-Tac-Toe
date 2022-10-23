@@ -12,7 +12,7 @@ namespace MyApp
         static void Main(string[] args)
         {
             Console.WriteLine(
-                "***********************************test2***************************\r\n" +
+                "**************************************************************\r\n" +
                 "INSTRUCTIONS:\r\n" +
                 "Welcome to Tic Tac Toe\r\n" +
                 "The game is played on a grid that's 3 squares by 3 squares.\r\n" +
