@@ -67,32 +67,32 @@ namespace MyApp
             double p2Turn = 0;
             double[] player1PicksArr = new double[5];
             double[] player2PicksArr = new double[5];
-            char[] gameArray = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+            char[] gameArray = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
             bool p1WonGame = false;
             while (compleateGameFlag == false)
             {
                 if (gameTurnNum % 2 == 0)
                 {
                     Console.WriteLine(
-                        "***********************************\n" +
-                        "*          |           |          *\n" +
-                        "*          |           |          *\n" +
-                       $"*    {gameArray[0]}     |     {gameArray[1]}     |     {gameArray[2]}    *\n" +
-                        "*   (1)    |    (2)    |    (3)   *\n" +
-                        "*          |           |          *\n" +
-                        "*----------|-----------|----------*\n" +
-                        "*          |           |          *\n" +
-                        "*          |           |          *\n" +
-                       $"*    {gameArray[3]}     |     {gameArray[4]}     |     {gameArray[5]}    *\n" +
-                        "*   (4)    |    (5)    |    (6)   *\n" +
-                        "*          |           |          *\n" +
-                        "*----------|-----------|----------*\n" +
-                        "*          |           |          *\n" +
-                        "*          |           |          *\n" +
-                       $"*   {gameArray[6]}      |     {gameArray[7]}     |     {gameArray[8]}    *\n" +
-                        "*   (7)    |    (8)    |    (9)   *\n" +
-                        "*          |           |          *\n" +
-                        "***********************************\n");
+                          "***********************************\n" +
+                          "*          |           |          *\n" +
+                          "*          |           |          *\n" +
+                         $"*    {gameArray[0]}     |     {gameArray[1]}     |     {gameArray[2]}    *\n" +
+                          "*          |           |          *\n" +
+                          "*          |           |          *\n" +
+                          "*----------|-----------|----------*\n" +
+                          "*          |           |          *\n" +
+                          "*          |           |          *\n" +
+                         $"*    {gameArray[3]}     |     {gameArray[4]}     |     {gameArray[5]}    *\n" +
+                          "*          |           |          *\n" +
+                          "*          |           |          *\n" +
+                          "*----------|-----------|----------*\n" +
+                          "*          |           |          *\n" +
+                          "*          |           |          *\n" +
+                         $"*   {gameArray[6]}      |     {gameArray[7]}     |     {gameArray[8]}    *\n" +
+                          "*          |           |          *\n" +
+                          "*          |           |          *\n" +
+                          "***********************************\n");
 
                     double pInput = PlayersInput(secondPlayerInGame, firstPlayerInGame, player1PicksArr, player2PicksArr, gameTurnNum);
                     gameArray[(int)pInput - 1] = 'X';
@@ -112,19 +112,19 @@ namespace MyApp
                          "*          |           |          *\n" +
                          "*          |           |          *\n" +
                         $"*    {gameArray[0]}     |     {gameArray[1]}     |     {gameArray[2]}    *\n" +
-                         "*   (1)    |    (2)    |    (3)   *\n" +
+                         "*          |           |          *\n" +
                          "*          |           |          *\n" +
                          "*----------|-----------|----------*\n" +
                          "*          |           |          *\n" +
                          "*          |           |          *\n" +
                         $"*    {gameArray[3]}     |     {gameArray[4]}     |     {gameArray[5]}    *\n" +
-                         "*   (4)    |    (5)    |    (6)   *\n" +
+                         "*          |           |          *\n" +
                          "*          |           |          *\n" +
                          "*----------|-----------|----------*\n" +
                          "*          |           |          *\n" +
                          "*          |           |          *\n" +
                         $"*   {gameArray[6]}      |     {gameArray[7]}     |     {gameArray[8]}    *\n" +
-                         "*   (7)    |    (8)    |    (9)   *\n" +
+                         "*          |           |          *\n" +
                          "*          |           |          *\n" +
                          "***********************************\n");
 
@@ -229,7 +229,6 @@ namespace MyApp
                     if (playerInput <= 0 || playerInput >= 10)
                     {
                         Console.WriteLine("Remember you can pick between 1-9");
-
                     }
                     else
                     {
@@ -260,14 +259,14 @@ namespace MyApp
 
         static string PlayerAssign(int playerNum)
         {
-            Console.WriteLine($"Player {playerNum} state your name no numbers allowed");
+            Console.WriteLine($"Player {playerNum} state your name no numbers allowed and you must have atleast one character!");
             bool player1Info = false;
             bool firstIteration = true;
             while (player1Info == false)
             {
                 if (firstIteration == false)
                 {
-                    Console.WriteLine("Remember no numbers!");
+                    Console.WriteLine("Remember no numbers allowed and you must have atleast one character!");
                     Console.WriteLine("try again");
                 }
                 bool intFlag = false;
@@ -275,7 +274,7 @@ namespace MyApp
                 int i = 9;
                 while (i >= 0)
                 {
-                    if (player.IndexOf($"{i}") >= 0)
+                    if (player.IndexOf($"{i}") >= 0 || player=="")
                     {
                         intFlag = true;
                     }
