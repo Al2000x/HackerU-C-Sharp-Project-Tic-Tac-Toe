@@ -259,14 +259,14 @@ namespace MyApp
 
         static string PlayerAssign(int playerNum)
         {
-            Console.WriteLine($"Player {playerNum} state your name no numbers allowed and you must have atleast one character!");
+            Console.WriteLine($"Player {playerNum} state your name no numbers allowed \nand you must have atleast one character!");
             bool player1Info = false;
             bool firstIteration = true;
             while (player1Info == false)
             {
                 if (firstIteration == false)
                 {
-                    Console.WriteLine("Remember no numbers allowed and you must have atleast one character!");
+                    Console.WriteLine("Remember no numbers allowed \nand you must have atleast one character!");
                     Console.WriteLine("try again");
                 }
                 bool intFlag = false;
